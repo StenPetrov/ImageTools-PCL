@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools", "ImageTools\ImageTools.csproj", "{EEB6E9D2-19F3-4694-ACA1-F72195A753B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools.IO.Gif", "ImageTools.IO.Gif\ImageTools.IO.Gif.csproj", "{35ACFEB3-885A-4D40-A1E2-50708C851527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools.IO.Bmp", "ImageTools.IO.Bmp\ImageTools.IO.Bmp.csproj", "{44EA41F9-DA7E-40D3-A384-3634FDF9FD98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools.IO.Png", "ImageTools.IO.Png\ImageTools.IO.Png.csproj", "{1F5A18F1-AB0D-4938-BABC-0463FD9A2FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools.IO.Jpeg", "ImageTools.IO.Jpeg\ImageTools.IO.Jpeg.csproj", "{A2DCE0EC-CAB6-41A1-9BE0-DD83C274CBCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools.PCL", "ImageTools.PCL\ImageTools.PCL.csproj", "{5CEA6A9F-1B94-4FD4-BB83-648EEE70E8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageTools.Filtering", "ImageTools.Filtering\ImageTools.Filtering.csproj", "{EE3E9A56-3E16-4910-8364-4CF7BC08F799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEB6E9D2-19F3-4694-ACA1-F72195A753B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB6E9D2-19F3-4694-ACA1-F72195A753B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB6E9D2-19F3-4694-ACA1-F72195A753B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB6E9D2-19F3-4694-ACA1-F72195A753B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35ACFEB3-885A-4D40-A1E2-50708C851527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35ACFEB3-885A-4D40-A1E2-50708C851527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35ACFEB3-885A-4D40-A1E2-50708C851527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35ACFEB3-885A-4D40-A1E2-50708C851527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EA41F9-DA7E-40D3-A384-3634FDF9FD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EA41F9-DA7E-40D3-A384-3634FDF9FD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EA41F9-DA7E-40D3-A384-3634FDF9FD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EA41F9-DA7E-40D3-A384-3634FDF9FD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5A18F1-AB0D-4938-BABC-0463FD9A2FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5A18F1-AB0D-4938-BABC-0463FD9A2FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5A18F1-AB0D-4938-BABC-0463FD9A2FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5A18F1-AB0D-4938-BABC-0463FD9A2FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2DCE0EC-CAB6-41A1-9BE0-DD83C274CBCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2DCE0EC-CAB6-41A1-9BE0-DD83C274CBCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2DCE0EC-CAB6-41A1-9BE0-DD83C274CBCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2DCE0EC-CAB6-41A1-9BE0-DD83C274CBCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CEA6A9F-1B94-4FD4-BB83-648EEE70E8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CEA6A9F-1B94-4FD4-BB83-648EEE70E8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CEA6A9F-1B94-4FD4-BB83-648EEE70E8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CEA6A9F-1B94-4FD4-BB83-648EEE70E8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE3E9A56-3E16-4910-8364-4CF7BC08F799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE3E9A56-3E16-4910-8364-4CF7BC08F799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE3E9A56-3E16-4910-8364-4CF7BC08F799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE3E9A56-3E16-4910-8364-4CF7BC08F799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2DCE0EC-CAB6-41A1-9BE0-DD83C274CBCD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImageTools.IO.Jpeg</RootNamespace>
+    <AssemblyName>ImageTools.IO.Jpeg</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile2</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Build\Debug\ImageTools.IO.Jpeg.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;PCL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Build\Release\ImageTools.IO.Jpeg.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .NET Framework is automatically included -->
+    <ProjectReference Include="..\ImageTools.PCL\ImageTools.PCL.csproj">
+      <Project>{5cea6a9f-1b94-4fd4-bb83-648eee70e8c7}</Project>
+      <Name>ImageTools.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageTools\ImageTools.csproj">
+      <Project>{eeb6e9d2-19f3-4694-aca1-f72195a753b5}</Project>
+      <Name>ImageTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FluxJpeg.Core\DCT.cs" />
+    <Compile Include="FluxJpeg.Core\DecodedJpeg.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\HuffmanTable.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\JpegComponent.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\JpegDecoder.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\JpegFrame.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\JpegHuffmanTable.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\JpegQuantizationTable.cs" />
+    <Compile Include="FluxJpeg.Core\Decoder\JpegScan.cs" />
+    <Compile Include="FluxJpeg.Core\Encoder\JpegEncoder.cs" />
+    <Compile Include="FluxJpeg.Core\FDCT.cs" />
+    <Compile Include="FluxJpeg.Core\Image.cs" />
+    <Compile Include="FluxJpeg.Core\IO\BinaryReader.cs" />
+    <Compile Include="FluxJpeg.Core\IO\BinaryWriter.cs" />
+    <Compile Include="FluxJpeg.Core\IO\JpegBinaryReader.cs" />
+    <Compile Include="FluxJpeg.Core\JpegMarker.cs" />
+    <Compile Include="FluxJpeg.Core\YCbCr.cs" />
+    <Compile Include="FluxJpeg.Core\ZigZag.cs" />
+    <Compile Include="JpegDecoder.cs" />
+    <Compile Include="JpegDecoderNano.cs" />
+    <Compile Include="JpegEncoder.cs" />
+    <Compile Include="KeyJ\NanoJPEG.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
