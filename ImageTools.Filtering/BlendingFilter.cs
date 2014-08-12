@@ -45,7 +45,7 @@ namespace ImageTools.Filtering
         /// <exception cref="ArgumentException"><paramref name="blendedImage"/> is null.</exception>
         public BlendingFilter(ImageBase blendedImage)
         {
-            Contract.Requires<ArgumentException>(blendedImage != null, "Pased image is not allowed to be null!");
+           // Contract.Requires<ArgumentException>(blendedImage != null, "Pased image is not allowed to be null!");
 
             _blendedImage = blendedImage;
         }

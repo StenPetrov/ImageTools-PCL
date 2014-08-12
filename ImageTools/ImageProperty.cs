@@ -24,7 +24,7 @@ namespace ImageTools
         [ContractInvariantMethod]
         private void ImagePropertyInvariantMethod()
         {
-            Contract.Invariant(!string.IsNullOrEmpty(_name));
+           // Contract.Invariant(!string.IsNullOrEmpty(_name));
         }
 #endif
 
@@ -44,7 +44,7 @@ namespace ImageTools
         {
             get
             {
-                Contract.Ensures(!string.IsNullOrEmpty(Contract.Result<string>()));
+               // Contract.Ensures(!string.IsNullOrEmpty(Contract.Result<string>()));
                 return _name;
             }
         }
@@ -69,7 +69,7 @@ namespace ImageTools
         /// <exception cref="ArgumentException"><paramref name="name"/> is null or empty.</exception>
         public ImageProperty(string name, string value)
         {
-            Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(name), "Name cannot be null or empty.");
+           // Contract.Requires<ArgumentException>(!string.IsNullOrEmpty(name), "Name cannot be null or empty.");
 
             _name = name;
 

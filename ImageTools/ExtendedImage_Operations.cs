@@ -29,9 +29,9 @@ namespace ImageTools
         /// </exception>
         public static ExtendedImage ApplyFilters(ExtendedImage source, params IImageFilter[] filters)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
-            Contract.Requires<ArgumentNullException>(filters != null, "Filters cannot be null.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(filters != null, "Filters cannot be null.");
 
             Rectangle bounds = source.Bounds;
 
@@ -59,9 +59,9 @@ namespace ImageTools
         /// </exception>
         public static ExtendedImage ApplyFilters(ExtendedImage source, Rectangle rectangle, params IImageFilter[] filters)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
-            Contract.Requires<ArgumentNullException>(filters != null, "Filters cannot be null.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(filters != null, "Filters cannot be null.");
 
             foreach (IImageFilter filter in filters)
             {
@@ -81,8 +81,8 @@ namespace ImageTools
         /// (Nothing in Visual Basic).</exception>
         public static ExtendedImage Crop(ExtendedImage source, Rectangle bounds)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
 
             return PerformAction(source, false, (sourceImage, targetImage) => ImageBase.Crop(sourceImage, targetImage, bounds));
         }
@@ -100,8 +100,8 @@ namespace ImageTools
         /// (Nothing in Visual Basic).</exception>
         public static ExtendedImage Transform(ExtendedImage source, RotationType rotationType, FlippingType flippingType)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
 
             return PerformAction(source, false, (sourceImage, targetImage) => ImageBase.Transform(sourceImage, targetImage, rotationType, flippingType));
         }
@@ -128,9 +128,9 @@ namespace ImageTools
         /// </exception>
         public static ExtendedImage Resize(ExtendedImage source, int width, int height, IImageResizer resizer)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
-            Contract.Requires<ArgumentNullException>(resizer != null, "Image Resizer cannot be null.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(resizer != null, "Image Resizer cannot be null.");
 
             return PerformAction(source, false, (sourceImage, targetImage) => resizer.Resize(sourceImage, targetImage, width, height));
         }
@@ -149,9 +149,9 @@ namespace ImageTools
         /// <exception cref="ArgumentException"><paramref name="size"/> is negative.</exception>
         public static ExtendedImage Resize(ExtendedImage source, int size, IImageResizer resizer)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
-            Contract.Requires<ArgumentNullException>(resizer != null, "Image Resizer cannot be null.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(resizer != null, "Image Resizer cannot be null.");
 
             int width = 0;
             int height = 0;
@@ -198,7 +198,7 @@ namespace ImageTools
         
         private static void VerifyHasLoaded(ExtendedImage image)
         {
-            Contract.Requires(image != null);
+           // Contract.Requires(image != null);
 
             if (!image.IsFilled)
             {

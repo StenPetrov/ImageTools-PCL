@@ -46,7 +46,7 @@ namespace ImageTools.Filtering
         /// </exception>
         protected void Initialize(double[,] filter)
         {
-            Contract.Requires<ArgumentNullException>(filter != null, "Filter cannot be null.");
+           // Contract.Requires<ArgumentNullException>(filter != null, "Filter cannot be null.");
 
             Initialize(filter, 1f, 0);
         }
@@ -71,7 +71,7 @@ namespace ImageTools.Filtering
         /// </exception>
         protected void Initialize(double[,] filter, double factor, double bias)
         {
-            Contract.Requires<ArgumentNullException>(filter != null, "Filter cannot be null.");
+           // Contract.Requires<ArgumentNullException>(filter != null, "Filter cannot be null.");
 
             Guard.GreaterThan(filter.GetLength(0), 0, "filter.GetLength(0)");
             Guard.GreaterThan(filter.GetLength(1), 0, "filter.GetLength(1)");

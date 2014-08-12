@@ -39,7 +39,7 @@ namespace ImageTools.IO
         /// <returns>A list of all available encoders.</returns>
         public static ReadOnlyCollection<IImageEncoder> GetAvailableEncoders()
         {
-            Contract.Ensures(Contract.Result<ReadOnlyCollection<IImageEncoder>>() != null);
+           // Contract.Ensures(Contract.Result<ReadOnlyCollection<IImageEncoder>>() != null);
 
             List<IImageEncoder> encoders = new List<IImageEncoder>();
 

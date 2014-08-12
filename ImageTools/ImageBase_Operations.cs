@@ -30,9 +30,9 @@ namespace ImageTools
         /// </exception>
         internal static void Transform(ImageBase source, ImageBase target, RotationType rotationType, FlippingType flippingType)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
-            Contract.Requires<ArgumentNullException>(target != null, "Target image cannot be null.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(target != null, "Target image cannot be null.");
 
             switch (rotationType)
             {
@@ -78,10 +78,10 @@ namespace ImageTools
 
         private static void Rotate270(ImageBase source, ImageBase target)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(source.IsFilled);
-            Contract.Requires(target != null);
-            Contract.Ensures(target.IsFilled);
+           // Contract.Requires(source != null);
+           // Contract.Requires(source.IsFilled);
+           // Contract.Requires(target != null);
+           // Contract.Ensures(target.IsFilled);
 
             int oldIndex = 0, newIndex = 0;
 
@@ -109,10 +109,10 @@ namespace ImageTools
 
         private static void Rotate180(ImageBase source, ImageBase target)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(source.IsFilled);
-            Contract.Requires(target != null);
-            Contract.Ensures(target.IsFilled);
+           // Contract.Requires(source != null);
+           // Contract.Requires(source.IsFilled);
+           // Contract.Requires(target != null);
+           // Contract.Ensures(target.IsFilled);
 
             int oldIndex = 0, newIndex = 0;
 
@@ -140,10 +140,10 @@ namespace ImageTools
 
         private static void Rotate90(ImageBase source, ImageBase target)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(source.IsFilled);
-            Contract.Requires(target != null);
-            Contract.Ensures(target.IsFilled);
+           // Contract.Requires(source != null);
+           // Contract.Requires(source.IsFilled);
+           // Contract.Requires(target != null);
+           // Contract.Ensures(target.IsFilled);
 
             int oldIndex = 0, newIndex = 0;
 
@@ -179,8 +179,8 @@ namespace ImageTools
         /// (Nothing in Visual Basic).</exception>
         private static void FlipX(ImageBase image)
         {
-            Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
-            Contract.Requires<ArgumentException>(image.IsFilled, "Other image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
+           // Contract.Requires<ArgumentException>(image.IsFilled, "Other image has not been loaded.");
 
             int oldIndex = 0, newIndex = 0;
 
@@ -224,8 +224,8 @@ namespace ImageTools
         /// (Nothing in Visual Basic).</exception>
         private static void FlipY(ImageBase image)
         {
-            Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
-            Contract.Requires<ArgumentException>(image.IsFilled, "Other image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(image != null, "Image cannot be null.");
+           // Contract.Requires<ArgumentException>(image.IsFilled, "Other image has not been loaded.");
 
             int oldIndex = 0, newIndex = 0;
 
@@ -273,9 +273,9 @@ namespace ImageTools
         [ContractVerification(false)]
         internal static void Crop(ImageBase source, ImageBase target, Rectangle bounds)
         {
-            Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
-            Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
-            Contract.Requires<ArgumentNullException>(target != null, "Target image cannot be null.");
+           // Contract.Requires<ArgumentNullException>(source != null, "Source image cannot be null.");
+           // Contract.Requires<ArgumentException>(source.IsFilled, "Source image has not been loaded.");
+           // Contract.Requires<ArgumentNullException>(target != null, "Target image cannot be null.");
 
             Guard.GreaterThan(bounds.Width, 0, "bounds",
                 "Width of the rectangle must be greater than zero.");

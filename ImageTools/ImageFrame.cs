@@ -29,9 +29,9 @@ namespace ImageTools
         public ImageFrame(ImageFrame other)
             : base(other)
         {
-            Contract.Requires<ArgumentNullException>(other != null, "Other image cannot be null.");
-            Contract.Requires<ArgumentException>(other.IsFilled, "Other image has not been loaded.");
-            Contract.Ensures(IsFilled);
+           // Contract.Requires<ArgumentNullException>(other != null, "Other image cannot be null.");
+           // Contract.Requires<ArgumentException>(other.IsFilled, "Other image has not been loaded.");
+           // Contract.Ensures(IsFilled);
         }
 
         /// <summary>

@@ -41,9 +41,9 @@ namespace ImageTools.Helpers
         /// <exception cref="ArgumentException"><paramref name="bits"/> is greater or equals than zero.</exception>
         public static byte[] ToArrayByBitsLength(this byte[] bytes, int bits)
         {
-            Contract.Requires<ArgumentNullException>(bytes != null, "Bytes cannot be null.");
-            Contract.Requires<ArgumentException>(bits > 0, "Bits must be greater than zero.");
-            Contract.Ensures(Contract.Result<byte[]>() != null);
+           // Contract.Requires<ArgumentNullException>(bytes != null, "Bytes cannot be null.");
+           // Contract.Requires<ArgumentException>(bits > 0, "Bits must be greater than zero.");
+           // Contract.Ensures(Contract.Result<byte[]>() != null);
 
             byte[] result = null;
 
@@ -59,8 +59,8 @@ namespace ImageTools.Helpers
                 {
                     for (int shift = 0; shift < 8; shift += bits)
                     {
-                        Contract.Assume(resultOffset < result.Length);
-                        Contract.Assume(factor > 0);
+                       // Contract.Assume(resultOffset < result.Length);
+                       // Contract.Assume(factor > 0);
 
                         int colorIndex = (((bytes[i]) >> (8 - bits - shift)) & mask) * (255 / factor);
 
@@ -78,43 +78,7 @@ namespace ImageTools.Helpers
 
             return result;
         }
-
-        /// <summary>
-        /// Gets the stream to a local resource
-        /// </summary>
-        /// <param name="uri">The path to the local stream. Cannot be null.</param>
-        /// <returns>The stream to the local resource when such a resource exists or null otherwise.</returns>
-        /// <exception cref="ArgumentNullException"><paramref name="uri"/> is null.</exception>
-        public static Stream GetLocalResourceStream(Uri uri)
-        {
-            Contract.Requires<ArgumentNullException>(uri != null, "Uri cannot be null.");
-
-            StreamResourceInfo info = Application.GetResourceStream(uri);
-            if (info == null)
-            {
-                Application app = Application.Current;
-
-                if (app != null)
-                {
-                    Type appplicationType = app.GetType();
-
-                    string assemblyName = appplicationType.Assembly.FullName.Split(new char[] { ',' })[0];
-
-                    string uriString = uri.OriginalString;
-                    uriString = string.Format(CultureInfo.CurrentCulture, "{0};component/{1}", assemblyName, uriString);
-                    uriString = uriString.Replace("\\", "/");
-                    uriString = uriString.Replace("//", "/");
-
-                    Uri resourceUri = new Uri(uriString, UriKind.Relative);
-
-                    info = Application.GetResourceStream(resourceUri);
-                }
-            }
-
-            Stream stream = info != null ? info.Stream : null;
-            return stream;
-        }
-
+ 
         /// <summary>
         /// Multiplies the values of the specified rectangle by the factor.
         /// </summary>
@@ -182,8 +146,8 @@ namespace ImageTools.Helpers
         /// </exception>
         public static void Foreach<T>(this IEnumerable<T> items, Action<T> action)
         {
-            Contract.Requires<ArgumentNullException>(items != null, "Items cannot be null");
-            Contract.Requires<ArgumentNullException>(action != null, "Action cannot be null.");
+           // Contract.Requires<ArgumentNullException>(items != null, "Items cannot be null");
+           // Contract.Requires<ArgumentNullException>(action != null, "Action cannot be null.");
 
             foreach (T item in items)
             {
@@ -206,8 +170,8 @@ namespace ImageTools.Helpers
         /// </exception>
         public static void Foreach(this IEnumerable items, Action<object> action)
         {
-            Contract.Requires<ArgumentNullException>(items != null, "Items cannot be null");
-            Contract.Requires<ArgumentNullException>(action != null, "Action cannot be null.");
+           // Contract.Requires<ArgumentNullException>(items != null, "Items cannot be null");
+           // Contract.Requires<ArgumentNullException>(action != null, "Action cannot be null.");
 
             foreach (object item in items)
             {
@@ -231,8 +195,8 @@ namespace ImageTools.Helpers
         /// </exception>
         public static void AddRange<TItem>(this ObservableCollection<TItem> target, IEnumerable<TItem> elements)
         {
-            Contract.Requires<ArgumentNullException>(target != null, "Target cannot be null");
-            Contract.Requires<ArgumentNullException>(elements != null, "Elements cannot be null.");
+           // Contract.Requires<ArgumentNullException>(target != null, "Target cannot be null");
+           // Contract.Requires<ArgumentNullException>(elements != null, "Elements cannot be null.");
 
             foreach (TItem item in elements)
             {
@@ -253,8 +217,8 @@ namespace ImageTools.Helpers
         /// </exception>
         public static void AddRange<TItem>(this Collection<TItem> target, IEnumerable<TItem> elements)
         {
-            Contract.Requires<ArgumentNullException>(target != null, "Target cannot be null");
-            Contract.Requires<ArgumentNullException>(elements != null, "Elements cannot be null.");
+           // Contract.Requires<ArgumentNullException>(target != null, "Target cannot be null");
+           // Contract.Requires<ArgumentNullException>(elements != null, "Elements cannot be null.");
 
             foreach (TItem item in elements)
             {

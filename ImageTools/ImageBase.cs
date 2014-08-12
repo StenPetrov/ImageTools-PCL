@@ -35,9 +35,9 @@ namespace ImageTools
         [ContractInvariantMethod]
         private void ImageBaseInvariantMethod()
         {
-            Contract.Invariant(!_isFilled || _pixels != null);
-            Contract.Invariant(!_isFilled || _pixelWidth >= 0);
-            Contract.Invariant(!_isFilled || _pixelHeight >= 0);
+           // Contract.Invariant(!_isFilled || _pixels != null);
+           // Contract.Invariant(!_isFilled || _pixelWidth >= 0);
+           // Contract.Invariant(!_isFilled || _pixelHeight >= 0);
         }
 #endif
 
@@ -96,7 +96,7 @@ namespace ImageTools
         {
             get
             {
-                Contract.Ensures(!IsFilled || Contract.Result<byte[]>() != null);
+               // Contract.Ensures(!IsFilled ||// Contract.Result<byte[]>() != null);
                 return _pixels;
             }
         }
@@ -112,7 +112,7 @@ namespace ImageTools
         {
             get 
             {
-                Contract.Ensures(!IsFilled || Contract.Result<int>() > 0);
+               // Contract.Ensures(!IsFilled ||// Contract.Result<int>() > 0);
                 return _pixelHeight; 
             }
         }
@@ -128,7 +128,7 @@ namespace ImageTools
         {
             get
             {
-                Contract.Ensures(!IsFilled || Contract.Result<int>() > 0);
+               // Contract.Ensures(!IsFilled ||// Contract.Result<int>() > 0);
                 return _pixelWidth;
             }
         }
@@ -141,7 +141,7 @@ namespace ImageTools
         {
             get
             {
-                Contract.Ensures(!IsFilled || Contract.Result<double>() > 0);
+               // Contract.Ensures(!IsFilled ||// Contract.Result<double>() > 0);
 
                 if (IsFilled)
                 {
@@ -174,10 +174,10 @@ namespace ImageTools
         {
             get
             {
-                Contract.Requires<InvalidOperationException>(IsFilled, "Image is not loaded.");
-                Contract.Requires<ArgumentException>(x >= 0 && x < PixelWidth, "X must be in the range of the image.");
-                Contract.Requires<ArgumentException>(y >= 0 && y < PixelHeight, "Y must be in the range of the image.");
-                Contract.Ensures(IsFilled);
+               // Contract.Requires<InvalidOperationException>(IsFilled, "Image is not loaded.");
+               // Contract.Requires<ArgumentException>(x >= 0 && x < PixelWidth, "X must be in the range of the image.");
+               // Contract.Requires<ArgumentException>(y >= 0 && y < PixelHeight, "Y must be in the range of the image.");
+               // Contract.Ensures(IsFilled);
 
                 int start = (y * PixelWidth + x) * 4;
 
@@ -192,10 +192,10 @@ namespace ImageTools
             }
             set
             {
-                Contract.Requires<InvalidOperationException>(IsFilled, "Image is not loaded.");
-                Contract.Requires<ArgumentException>(x >= 0 && x < PixelWidth, "X must be in the range of the image.");
-                Contract.Requires<ArgumentException>(y >= 0 && y < PixelHeight, "Y must be in the range of the image.");
-                Contract.Ensures(IsFilled);
+               // Contract.Requires<InvalidOperationException>(IsFilled, "Image is not loaded.");
+               // Contract.Requires<ArgumentException>(x >= 0 && x < PixelWidth, "X must be in the range of the image.");
+               // Contract.Requires<ArgumentException>(y >= 0 && y < PixelHeight, "Y must be in the range of the image.");
+               // Contract.Ensures(IsFilled);
 
                 int start = (y * PixelWidth + x) * 4;
 
@@ -238,9 +238,9 @@ namespace ImageTools
         /// </exception>
         public ImageBase(int width, int height)
         {
-            Contract.Requires<ArgumentException>(width >= 0, "Width must be greater or equals than zero.");
-            Contract.Requires<ArgumentException>(height >= 0, "Height must be greater or equals than zero.");
-            Contract.Ensures(IsFilled);
+           // Contract.Requires<ArgumentException>(width >= 0, "Width must be greater or equals than zero.");
+           // Contract.Requires<ArgumentException>(height >= 0, "Height must be greater or equals than zero.");
+           // Contract.Ensures(IsFilled);
 
             _pixelWidth  = width;
             _pixelHeight = height;
@@ -260,9 +260,9 @@ namespace ImageTools
         /// <exception cref="ArgumentException"><paramref name="other"/> is not loaded.</exception>
         public ImageBase(ImageBase other)
         {
-            Contract.Requires<ArgumentNullException>(other != null, "Other image cannot be null.");
-            Contract.Requires<ArgumentException>(other.IsFilled, "Other image has not been loaded.");
-            Contract.Ensures(IsFilled);
+           // Contract.Requires<ArgumentNullException>(other != null, "Other image cannot be null.");
+           // Contract.Requires<ArgumentException>(other.IsFilled, "Other image has not been loaded.");
+           // Contract.Ensures(IsFilled);
 
             byte[] pixels = other.Pixels;
 
@@ -306,10 +306,10 @@ namespace ImageTools
         /// <exception cref="ArgumentNullException"><paramref name="pixels"/> is null.</exception>
         public void SetPixels(int width, int height, byte[] pixels)
         {
-            Contract.Requires<ArgumentException>(width >= 0, "Width must be greater than zero.");
-            Contract.Requires<ArgumentException>(height >= 0, "Height must be greater than zero.");
-            Contract.Requires<ArgumentNullException>(pixels != null, "Pixels cannot be null.");
-            Contract.Ensures(IsFilled);
+           // Contract.Requires<ArgumentException>(width >= 0, "Width must be greater than zero.");
+           // Contract.Requires<ArgumentException>(height >= 0, "Height must be greater than zero.");
+           // Contract.Requires<ArgumentNullException>(pixels != null, "Pixels cannot be null.");
+           // Contract.Ensures(IsFilled);
 
             if (pixels.Length != width * height * 4)
             {

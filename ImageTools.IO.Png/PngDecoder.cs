@@ -306,7 +306,7 @@ namespace ImageTools.IO.Png
                         }
                         else if (filter == 3)
                         {
-                            currScanline[column] = (byte)(currScanline[column] + (byte)Math.Floor((a + b) / 2));
+                            currScanline[column] = (byte)(currScanline[column] + (byte)Math.Floor((a + b) / 2d));
                         }
                         else if (filter == 4)
                         {

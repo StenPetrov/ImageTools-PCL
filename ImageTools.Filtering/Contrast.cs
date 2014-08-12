@@ -38,8 +38,8 @@ namespace ImageTools.Filtering
         /// </exception>
         public Contrast(int contrast)
         {
-            Contract.Requires<ArgumentException>(contrast >= -255, "Brightness must be greater than -255.");
-            Contract.Requires<ArgumentException>(contrast <= 255, "Brightness must be less than 255.");
+           // Contract.Requires<ArgumentException>(contrast >= -255, "Brightness must be greater than -255.");
+           // Contract.Requires<ArgumentException>(contrast <= 255, "Brightness must be less than 255.");
 
             _contrast = contrast;
         }

@@ -10,8 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ImageTools.IO.Jpeg</RootNamespace>
     <AssemblyName>ImageTools.IO.Jpeg</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile2</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
@@ -37,11 +37,11 @@
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
     <ProjectReference Include="..\ImageTools.PCL\ImageTools.PCL.csproj">
-      <Project>{5cea6a9f-1b94-4fd4-bb83-648eee70e8c7}</Project>
+      <Project>{5CEA6A9F-1B94-4FD4-BB83-648EEE70E8C7}</Project>
       <Name>ImageTools.PCL</Name>
     </ProjectReference>
     <ProjectReference Include="..\ImageTools\ImageTools.csproj">
-      <Project>{eeb6e9d2-19f3-4694-aca1-f72195a753b5}</Project>
+      <Project>{EEB6E9D2-19F3-4694-ACA1-F72195A753B5}</Project>
       <Name>ImageTools</Name>
     </ProjectReference>
   </ItemGroup>
